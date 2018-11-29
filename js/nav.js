@@ -3,7 +3,6 @@ $(document).ready(function($){
 	$('.par').each(function() {
 		parPosition.push($(this).offset().top);
 	});
-	console.log(parPosition);
 
 	$('a').click(function(){
 		$('html, body').animate({
