@@ -202,6 +202,11 @@ nav.shrink .navbar-right {
   font-size: 15px;
 }
 
+a.link.active, .navbar.shrink a:hover {
+  background-color: transparent;
+  color: #B27F00;
+  width: 100%;
+}
 
 /*
   Vertical
@@ -403,19 +408,27 @@ h5.little {
     Portfolio Section
 -------------------------------------------------------------------------------*/
 #section02 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
+  background: #fff;
 }
+
+#top {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 35vh;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.portf-heading {
+  color: #555;
+  font-size: 2.5em;
+  padding-bottom: 35px;
+  text-align: center;
+}
+
 /* ------------------------------------------------------------------------------
     Scroll button effect
 -------------------------------------------------------------------------------*/

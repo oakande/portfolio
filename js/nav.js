@@ -4,7 +4,7 @@ $(document).ready(function($){
 		parPosition.push($(this).offset().top);
 	});
 
-	$('a').click(function(){
+	$('a.eff').click(function(){
 		$('html, body').animate({
 		scrollTop: $( $.attr(this, 'href') ).offset().top
 		}, 500);

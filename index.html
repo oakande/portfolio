@@ -8,11 +8,14 @@
 
     <title>Olawale Akande - Personal Portfolio</title>
 
-	<link rel="stylesheet" href="css/style.css">
+	
+	<link rel="stylesheet" href="css/filter.css">
 	<link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/mobile.css">
+	<link rel="stylesheet" href="css/style.css">
 
-    <link href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" rel="stylesheet">
+	<link href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/imagehover.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
@@ -30,11 +33,11 @@
 						<a href="#">OЛkЛnde</a>
 					</div>
 	
-					<ul class="nav navbar-right">
-						<li><a href="#main" class="active">Home</a></li>
-						<li><a href="#section01"> About</a></li>
-						<li><a href="#section02"> Portfolio</a></li>
-						<li><a href="#section03"> Contact</a></li>
+					<ul class="nav navbar-right" id="main-nav">
+						<li><a href="#main" class="link active eff">Home</a></li>
+						<li><a href="#section01" class="link eff"> About</a></li>
+						<li><a href="#section02" class="link eff"> Portfolio</a></li>
+						<li><a href="#section03" class="link"> Contact</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -159,65 +162,77 @@
 			</div>
 		</div>
 
-  	</section>
+	  </section>
+	  
 	<section id="section02" class="par">
 		<div class="container">
 			<div class="row">
 
 				<div class="col12x">
-					<div class="profile-icon">
-						<div class="inner">
-							<i class="fa fa-user-tie"></i>
+					<div id="top">
+		
+						<h1 class="portf-heading">My Works</h1>
+
+						<div class="portfolioFilter">
+							<a href="#" data-filter="*" class="current">All Categories</a>
+							<a href="#" data-filter=".logos" class="">Graphic Design</a>
+							<a href="#" data-filter=".webTemplates" class="">Web Design</a>
 						</div>
-					</div>
 
-					<div class="profile">
-						<h1>Portfolio</h1>
-					</div>
-					<h5 class="little">My works</h5>
-				</div>
-
-				<div class="col6l">
-					<div class="col6m">
-						esrgthdfs
-					</div>
-
-					<div class="col6m">
-						dsfhsdfghf
 					</div>
 				</div>
 
-				<div class="col6l">
+				<div class="col12x">
+					<div class="portfolioContainer isotope" style="position: relative; overflow: hidden; height: 504px;">
+
 					
+						<div class="webTemplates isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(424px, 168px, 0px) scale3d(1, 1, 1); opacity: 1;">
+							<img src="https://mir-s3-cdn-cf.behance.net/projects/202/14385875.548573dae7a09.jpg" alt="image">
+						</div>
+					
+						<div class="logos isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(848px, 168px, 0px) scale3d(1, 1, 1); opacity: 1;">
+							<img src=" https://mir-s3-cdn-cf.behance.net/projects/202/1d854a24500155.5505cccd057a4.jpg" alt="image">
+						</div>
+
+						<figure class="imghvr-fade">
+							<img src="img/forever-fresh.PNG">
+							<figcaption>
+								// Hover Content
+							</figcaption>
+							<a href="http://www.imagehover.io"></a>
+						</figure>
+						
+					</div>
 				</div>
 	
 			</div>
 		</div>
 	</section>
+
 	<section id="section03" class="par"></section>
 
   	<div class="vNav">
 		<ul class="vNav">
 			<li>
-				<a href="#main">
+				<a class="eff" href="#main">
 					<div class="label">Home</div>
 				</a>
 			</li>
 
 			<li>
-				<a href="#section01">
+				<a class="eff" href="#section01">
 					<div class="label">About</div>
 				</a>
 			</li>
 
 			<li>
-				<a href="#section02">
+				<a class="eff" href="#section02">
 					<div class="label">Portfolio</div>
 				</a>
 			</li>
 
 			<li>
-				<a href="#section03">
+				<a class="eff" href="#section03">
 					<div class="label">Contact</div>
 				</a>
 			</li>
@@ -225,7 +240,9 @@
   	</div>
 
 	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script src="https://isotope.metafizzy.co/v1/jquery.isotope.min.js"></script>
 	<script src="js/nav.js"></script>
+	<script src="js/filter.js"></script>
 	<script src="js/script.js"></script>
 </body>
 

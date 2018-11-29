@@ -1,22 +1,16 @@
-var links = document.getElementsByTagName("a");
+var btnContainer = document.getElementById("main-nav");
 
-//Browse the previously created array
-Array.prototype.forEach.call(links, function(elem, index) {
-  //Get the hyperlink target and if it refers to an id go inside condition
-  var elemAttr = elem.getAttribute("href");
-  if(elemAttr && elemAttr.includes("#")) {
-    //Replace the regular action with a scrolling to target on click
-    elem.addEventListener("click", function(ev) {
-      ev.preventDefault();
-      //Scroll to the target element using replace() and regex to find the href's target id
-      document.getElementById(elemAttr.replace(/#/g, "")).scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-          inline: "nearest"
-          });
-    });
-  }
-});
+var links = btnContainer.getElementsByClassName("link");
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < links.length; i++) {
+  links[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
 
 $(function(){
  var shrinkHeader = 10;
