@@ -1,29 +1,39 @@
-var btnContainer = document.getElementById("main-nav");
 
-var links = btnContainer.getElementsByClassName("link");
-
-// Loop through the buttons and add the active class to the current/clicked button
-for (var i = 0; i < links.length; i++) {
-  links[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
+// variables
+var $header_top = $('.header-top');
+var $nav = $('nav');
 
 
-$(function(){
- var shrinkHeader = 10;
-  $(window).scroll(function() {
-    var scroll = getCurrentScroll();
-      if ( scroll >= shrinkHeader ) {
-       $('.navbar').addClass('shrink');
-      }
-      else {
-        $('.navbar').removeClass('shrink');
-      }
-  });
-  function getCurrentScroll() {
-    return window.pageYOffset || document.documentElement.scrollTop;
-  }
+
+// toggle menu 
+$header_top.find('a').on('click', function() {
+  	$(this).parent().toggleClass('open-menu');
 });
+
+
+
+// fullpage customization
+$('#fullpage').fullpage({
+	licenseKey: 'FBA2A933-1E6941E5-99A5E62C-9F7FBBD6',
+	sectionsColor: ['#B8AE9C', '#348899', '#F2AE72', '#5C832F'],
+	sectionSelector: '.vertical-scrolling',
+	slideSelector: '.horizontal-scrolling',
+	navigation: true,
+	lockAnchors: true,
+	anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection'],
+	menu: '#menu',
+
+	afterLoad: function(anchorLink, index) {
+		$header_top.css('background', 'rgba(0, 47, 77, .3)');
+		$nav.css('background', 'rgba(0, 47, 77, .25)');
+		if (index == 5) {
+			$('#fp-nav').hide();
+		}
+	},
+
+	onLeave: function(index, nextIndex, direction) {
+		if(index == 5) {
+			$('#fp-nav').show();
+		}
+	} 
+}); 
