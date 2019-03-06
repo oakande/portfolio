@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/scroll.css">
-    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/fullpage.min.css">
 
@@ -24,53 +24,206 @@
 
 </head>
 <body>
-    <header>
-        <div class="header-top clearfix">
-            <h1 class="l-left logo"><a href="#firstSection">OЛkЛnde</a></h1>
-            <!-- <a class="l-right toggle-menu" href="#">
-                <i></i>
-                <i></i>
-                <i></i>
-            </a> -->
-        </div>
-      
-        <nav class="">
-            <ul id="menu">
-                <li data-menuanchor="firstSection">
-                    <a href="#firstSection" title="First Section">First Section</a>
-                </li>
-                <li data-menuanchor="secondSection">
-                    <a href="#secondSection" title="Second Section">Second Section</a>
-                </li>
-                <li data-menuanchor="thirdSection">
-                    <a href="#thirdSection" title="Second Section">Third Section</a>
-                </li>
-                <li data-menuanchor="fourthSection">
-                    <a href="#fourthSection" title="Fourth Section">Fourth Section</a>
-                </li>
-            </ul>
+    <header id="main-header" class="header-top" style="background: rgba(0, 47, 77, .3);">
+        <nav class="nav navbar">
+            <div class="container-fluid">
+                <div class="logo">
+                    <a href="#">OЛkЛnde</a>
+                </div>
+
+                <ul class="navbar-right" id="menu">
+                    <li data-menuanchor="firstSection" class="active">
+                        <a href="#firstSection">Home</a>
+                    </li>
+                    <li data-menuanchor="secondSection">
+                        <a href="#secondSection">About</a>
+                    </li>
+                    <li data-menuanchor="thirdSection">
+                        <a href="#thirdSection">Portfolio</a>
+                    </li>
+
+                    <li data-menuanchor="fourthSection">
+                        <a href="#fourthSection">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="mobile-menu">
+                    <a class="l-right toggle-menu" href="#">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </a>
+                </div>
+
+            </div>
         </nav>
     </header>
       
-      <div id="fullpage">
-        <section class="vertical-scrolling">
-          <h2>fullPage.js</h2>
-          <h3>This is the first section</h3>
-        </section>
-        <section class="vertical-scrolling">
-          <h2>fullPage.js</h2>
-          <h3>This is the second section</h3>
-        </section>
-        <section class="vertical-scrolling">
-          <h2>fullPage.js</h2>
-          <h3>This is the third section</h3>
-        </section>
-        <section class="vertical-scrolling">
-          <h2>fullPage.js</h2> 
-          <h3>This is the fourth section</h3>
-        </section>
+    <div id="fullpage">
         
-      </div>
+        <section class="vertical-scrolling">
+
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="cta">
+                        <h2 class="header">Olawale Akande</h2>
+                        <p>A front-end developer with a passion
+                            <br> for web design, based in St George, Utah
+                        </p>
+
+                        <button href="#secondSection" class="more">tell me more</button>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="absolute">
+                <h2>Welcome</h2>
+            </div>
+
+            <div id="scroll-btn" class="text-center demo">
+                <a href="#scroll-eff"><span></span></a>
+            </div>
+
+        </section>
+        <section class="vertical-scrolling">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col5m">
+
+                        <div class="dark">
+                            <div class="clip-wrap">
+                                <img src="img/profile.png" alt="demo-clip-path" class="clip-polygon">
+                            </div>
+                            <div class="clip-text">
+                                <h5 style="float: left;">My name is....</h5>
+                                <br><h4>Olawale Akande,</h4>
+                                <h5 style="float: left;">I build websites.</h5>
+                            </div>
+                        </div>
+
+                        <div class="dark" style="margin-top:20px">
+                            <div class="text-left">
+
+                                <!-- HTML -->
+                                <div class="desc">
+                                    <span style="float:left;">HTML</span> <span style="float:right;">85%</span>
+                                </div>
+                                <div class="skillbar-container clearfix" data-percent="85%">
+                                    <div class="skills" style="background: white; width: 85%;"></div>
+                                </div>
+
+                                <!-- JavaScript -->
+                                <div class="desc">
+                                        <span style="float:left;">JavaScript</span> <span style="float:right;">65%</span>
+                                    </div>
+                                <div class="skillbar-container clearfix" data-percent="65%">
+                                    <div class="skills" style="background: white; width: 65%;"></div>
+                                </div>
+
+                                <!-- jQuery -->
+                                <div class="desc">
+                                        <span style="float:left;">jQuery</span> <span style="float:right;">50%</span>
+                                    </div>
+                                <div class="skillbar-container clearfix" data-percent="50%">
+                                    <div class="skills" style="background: white; width: 50%;"></div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col7m">
+                        <div class="dark">
+                            <h3 class="headline">About Me</h3>
+                            <p class="about-me">
+                                I am Olawale Akande, a frond-end developer based in St George, Utah. I'm currently at Dixie State University studing Web Design and Development, I worked for Get Success LLC as a UI/UX Programmer intern for 6 months.
+                                <br>							
+                                <br>I am passoinate about web and design, creating new ideas, and visual aesthetics. I take pride at working in details.
+                                <br>
+                                <br>Currently am open to any exciting freelance and collaborative opportunities, I am willing to work with new challenges, new positions as well as looking for opportunities to work.
+                            </p>
+                        </div>
+
+                        <div class="cv-container">
+                            <div class="cv" style="padding-right: 20px;">
+                                <a href="/">
+                                    <i class="fa fa-folder-open-o"></i>
+                                    Browse my Projects
+                                </a>
+                            </div>
+    
+                            <div class="cv">
+                                <a href="img/my-resume.pdf"> 
+                                    <i class="fa fa-download"></i>
+                                    Download my Resume
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="absolute">
+                <h2>About Me</h2>
+            </div>
+        </section>
+        <section class="vertical-scrolling">
+            
+        </section>
+        <section class="vertical-scrolling">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col6m">
+                        <div class="contact-info">
+                            <h2 class="large-header">Contact</h2>
+                            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ratione, 
+                                numquam alias reprehenderit modi sapiente magni enim, deleniti
+                                 neque architecto, odit fugiat quod. Saepe assumenda perspiciatis ducimus, 
+                            eos alias ullam!</p>
+
+                            <div class="mobile-hide">
+                                <h5 class="small-header">Address</h5>
+                                <p>123 S Main Street, St George, Utah</p>
+    
+                                <h5 class="small-header">Phone</h5>
+                                <p>+1 (435) 767 5690</p>
+    
+                                <h5 class="small-header">E-mail</h5>
+                                    <p>info@walemichael.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col6m col12s">
+                        <div class="form">
+                            <h2 class="large-header">Contact Form</h2>
+                            <div class="form__field">
+                                <input id="init-email" type="text" placeholder="Your name" required="">
+                        
+                                <input id="init-pw" type="password" placeholder="Your phone" required="">
+
+                                <input id="init-email" type="email" placeholder="Your e-mail" required="">
+
+                                <input id="init-msg" type="text" placeholder="Message" required="">
+                            </div>
+
+                            <button class="btn-submit">Send Message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    
+    </div>
 
 <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/vendors/easings.min.js"></script>

@@ -3,37 +3,50 @@
 var $header_top = $('.header-top');
 var $nav = $('nav');
 
-
-
 // toggle menu 
 $header_top.find('a').on('click', function() {
-  	$(this).parent().toggleClass('open-menu');
+	$(this).parent().toggleClass('open-menu');
 });
-
-
 
 // fullpage customization
 $('#fullpage').fullpage({
+	menu: '#menu',
 	licenseKey: 'FBA2A933-1E6941E5-99A5E62C-9F7FBBD6',
-	sectionsColor: ['#B8AE9C', '#348899', '#F2AE72', '#5C832F'],
+	sectionsColor: ['#000', '#1d1d1d', '#000', '#1d1d1d'],
 	sectionSelector: '.vertical-scrolling',
 	slideSelector: '.horizontal-scrolling',
 	navigation: true,
-	lockAnchors: true,
+	navigationPosition: 'right',
+	scrollBar: false,
 	anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection'],
-	menu: '#menu',
 
 	afterLoad: function(anchorLink, index) {
 		$header_top.css('background', 'rgba(0, 47, 77, .3)');
 		$nav.css('background', 'rgba(0, 47, 77, .25)');
-		if (index == 5) {
+		if (index == 4) {
 			$('#fp-nav').hide();
 		}
 	},
 
 	onLeave: function(index, nextIndex, direction) {
-		if(index == 5) {
-			$('#fp-nav').show();
+		if(index == 4) {
+		  $('#fp-nav').show();
 		}
-	} 
+	}
 }); 
+
+$(window).scroll(function() {
+    var hT = $('#skill-bar-wrapper').offset().top,
+        hH = $('#skill-bar-wrapper').outerHeight(),
+        wH = $(window).height(),
+        wS = $(this).scrollTop();
+    if (wS > (hT+hH-1.4*wH)){
+        jQuery(document).ready(function(){
+            jQuery('.skillbar-container').each(function(){
+                jQuery(this).find('.skills').animate({
+                    width:jQuery(this).attr('data-percent')
+                }, 5000); // 5 seconds
+            });
+        });
+    }
+ });
