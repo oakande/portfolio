@@ -250,6 +250,112 @@ p.about-me {
 }
 
 /* ------------------------------------------------------------------------------
+   Portfolio page
+-------------------------------------------------------------------------------*/
+.container-carousel {
+    position:relative;
+    width:960px;
+    margin: 0 auto;
+    margin-top: -180px;
+}
+#carousel {
+    padding: 0;
+    width:960px;
+    height: 300px;
+    display: flex;
+    position:relative;
+}
+
+.carousel-image {
+    height: 350px;
+    object-fit: scale-down;
+    border:0;
+    display:block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.carousel-feature {
+    position:absolute;
+    top:-1000px;
+    left:-1000px;
+    cursor:pointer;
+}
+.carousel-feature .carousel-caption {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    background-color:#000;
+}
+.carousel-feature .carousel-caption p {
+    margin:0;
+    padding: 20px 0;
+    font-weight: 400;
+    font-size:14px;
+    color:white;
+    text-transform: none;
+}
+
+
+.tracker-summation-container {
+    position:absolute;
+    color:white;
+    right:48px;
+    top:230px;
+    padding:3px;
+    margin:3px;
+    background-color:#000;
+}
+
+.tracker-individual-container {
+    position:absolute;
+    color:white;
+    right:48px;
+    top:210px;
+    padding:0;
+    margin:0;
+}
+
+.tracker-individual-container li {
+    list-style:none;
+}
+
+.tracker-individual-container .tracker-individual-blip {
+    margin:0 3px;
+    padding:0 3px;
+    color:white;
+    text-align:center;
+    background-color:#DDD;
+}
+
+.tracker-individual-container .tracker-individual-blip-selected {
+    color:white;
+    font-weight:bold;
+    background-color:#000;
+}
+
+.carousel-caption h3 {
+    font-size: 4.25em;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.carousel-caption .btn {
+    display: inline-block;
+    background: #262222;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 15px 25px;
+    border-radius: 5px;
+    box-shadow: 0px 17px 10px -10px rgba(0,0,0,0.4);
+    cursor: pointer;
+    transition: all ease-in-out 300ms;
+}
+
+/* ------------------------------------------------------------------------------
    Contact page
 -------------------------------------------------------------------------------*/
 .large-header {
@@ -282,10 +388,6 @@ p.text {
 }
 
 .form {
-    background: #181818;
-    -webkit-box-shadow: 2px 5px 32px 1px rgba(0,0,0,0.25);
-    -moz-box-shadow: 2px 5px 32px 1px rgba(0,0,0,0.25);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     height: 500px;
     padding: 2em 4em;
 }
@@ -296,11 +398,10 @@ input, textarea {
     border: 0;
     padding: 12px 5px;
     margin-bottom: 2em;
-    background: transparent no-repeat;
-    background-image: linear-gradient(to bottom, #3e49c3, #0097af), linear-gradient(to bottom, #000000, #797979);
-    background-size: 0 2px, 100% 1px;
-    background-position: 50% 100%, 50% 100%;
+    background: #303030;
+    border-radius: 4px;
     letter-spacing: 1.5px;
+    color: #fff;
     font-family: inherit;
     font-size: 16px;
     resize: none;
@@ -315,11 +416,25 @@ textarea:focus{
 }
 
 .btn-submit {
-    padding: 15px 40px;
-    background: transparent;
+    /* padding: 15px 40px; */
+    background: #29333c;
     border: none;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     color: #fff;
+    border-radius: 2.5em;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    height: 4em;
+    letter-spacing: 1px;
+    line-height: 2.95em;
+    min-width: 15em;
+    padding: 0 1.5em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-size: 12px;
 }
 
 .btn-submit:hover {
