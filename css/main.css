@@ -310,6 +310,7 @@ p.about-me {
 }
 
 .tracker-individual-container {
+    display: none;
     position:absolute;
     color:white;
     right:48px;

@@ -1,0 +1,28 @@
+@media only screen and (max-width: 600px) {
+    .cta {
+        text-align: center;
+        width: 100%;
+    }
+    .fp-tableCell {
+        height: 100%;
+    }
+
+    .absolute h2 {
+        display: none;
+    }
+
+    .container-carousel {
+        max-width: 100%;
+    }
+
+    .form {
+        height: inherit;
+    }
+
+    p.text {
+        font-size: 14px;
+        padding: 3.5em 0;
+        text-align: left;
+        letter-spacing: 1px;
+    }
+}   
